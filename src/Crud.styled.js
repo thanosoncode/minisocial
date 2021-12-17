@@ -117,7 +117,7 @@ export const StyledPostHeader = styled.header`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     margin-right: 10px;
   }
   p:last-child {
