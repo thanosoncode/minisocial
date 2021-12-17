@@ -3,7 +3,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
-  signOut,
 } from "firebase/auth";
 import { auth } from "./firebase";
 import { useGlobalContext } from "./Context";
@@ -59,14 +58,23 @@ function Auth() {
   });
 
   useEffect(() => {
+    let isMounted = true;
     setTimeout(() => {
-      setErrorLogin("");
+      if (isMounted) {
+        setErrorLogin("");
+      }
     }, 3000);
+    return () => (isMounted = false);
   }, [errorLogin]);
+
   useEffect(() => {
+    let isMounted = true;
     setTimeout(() => {
-      setErrorRegister("");
+      if (isMounted) {
+        setErrorRegister("");
+      }
     }, 3000);
+    return () => (isMounted = false);
   }, [errorRegister]);
 
   return (

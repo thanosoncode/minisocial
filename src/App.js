@@ -1,15 +1,15 @@
 import Crud from "./Crud";
 import Auth from "./Auth";
-import styled from "styled-components";
+
 import { useGlobalContext } from "./Context";
 import { ThemeProvider } from "styled-components";
 
 const theme = {
-  color: "#ee7752",
+  color: "#e73c7e",
 };
 
 const App = () => {
-  const { user, isLoggedIn } = useGlobalContext();
+  const { isLoggedIn } = useGlobalContext();
   return (
     <ThemeProvider theme={theme}>
       <>{isLoggedIn ? <Crud /> : <Auth />}</>

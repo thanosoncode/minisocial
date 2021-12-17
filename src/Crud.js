@@ -35,7 +35,7 @@ const Crud = () => {
   const { user, setIsLoggedIn, posts, setPosts } = useGlobalContext();
 
   const [post, setPost] = useState("");
-  const [updating, setUpdating] = useState(false);
+  // const [updating, setUpdating] = useState(false);
   const [updatedPost, setUpdatedPost] = useState();
   const [creatingPost, setCreatingPost] = useState(false);
   const [showAllPosts, setShowAllPosts] = useState(true);
@@ -64,13 +64,13 @@ const Crud = () => {
       editing: false,
       likes: 0,
     });
-    console.log(new Date().getTime());
+
     setCreatingPost(false);
     getPosts();
   };
 
   const handleEditing = (id, post) => {
-    setUpdating(true);
+    // setUpdating(true);
     setUpdatedPost(post);
     setPosts(
       posts.map((post) => (post.id === id ? { ...post, editing: true } : post))
@@ -81,7 +81,7 @@ const Crud = () => {
     const userDoc = doc(db, "posts", id);
     const newFields = { post: updatedPost };
     await updateDoc(userDoc, newFields);
-    setUpdating(false);
+    // setUpdating(false);
     getPosts();
   };
 
@@ -124,7 +124,13 @@ const Crud = () => {
   };
 
   useEffect(() => {
+    let isMounted = true;
+
     getPosts();
+    console.log("fired");
+    return () => {
+      return (isMounted = false);
+    };
   }, [user, showAllPosts]);
   return (
     <Container>

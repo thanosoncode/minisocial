@@ -48,6 +48,11 @@ export const StyledNav = styled.header`
   button:hover {
     opacity: 0.8;
   }
+  @media (max-width: 500px) {
+    li {
+      margin-right: 5px;
+    }
+  }
 `;
 export const StyledHeading = styled.div`
   text-align: center;
@@ -119,6 +124,7 @@ export const EditTextarea = styled.textarea`
 export const StyledSpan = styled.span`
   display: ${(display) => display};
   margin-left: 10px;
+  cursor: pointer;
 `;
 
 export const LikeSection = styled.section`
@@ -136,5 +142,8 @@ export const LikeSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  span:last-child {
+    cursor: pointer;
   }
 `;
