@@ -19,12 +19,12 @@ export const Form = styled.form`
   h3 {
     color: ${({ theme }) => theme.color};
     margin: 20px 0 10px 0;
-    font-size: 1.6em;
+    font-size: 2rem;
     text-align: center;
   }
 
   p {
-    font-size: 0.9em;
+    font-size: 1.1remem;
     margin-bottom: 10px;
   }
 
@@ -35,6 +35,7 @@ export const Form = styled.form`
     outline: none;
     border-bottom: 1px solid #777;
     padding-left: 6px;
+    font-size: 1.1rem;
   }
 
   button {
@@ -47,6 +48,7 @@ export const Form = styled.form`
     color: white;
     padding: 10px 0;
     text-transform: uppercase;
+    font-size: 1.1rem;
   }
 
   button:hover {
@@ -61,7 +63,7 @@ export const Form = styled.form`
     text-align: center;
   }
   span {
-    font-size: 0.9em;
+    font-size: 1.1rem;
     margin-right: 10px;
   }
 

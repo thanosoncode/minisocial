@@ -12,7 +12,7 @@ export const StyledNav = styled.header`
   align-items: center;
   margin-right: 10px;
   margin-bottom: 40px;
-  font-size: 0.9em;
+  font-size: 1.1rem;
 
   ul {
     display: flex;
@@ -43,6 +43,7 @@ export const StyledNav = styled.header`
     transition: 0.3s ease;
     background: none;
     border: none;
+    font-size: 1.1rem;
   }
 
   button:hover {
@@ -50,7 +51,7 @@ export const StyledNav = styled.header`
   }
   @media (max-width: 500px) {
     li {
-      margin-right: 5px;
+      margin-right: 15px;
     }
   }
 `;
@@ -58,10 +59,14 @@ export const StyledHeading = styled.div`
   text-align: center;
   margin-bottom: 40px;
   h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 10px;
   }
   p {
     color: ${({ theme }) => theme.color};
     cursor: pointer;
+    font-size: 1.2rem;
   }
   p:hover {
     opacity: 0.8;
@@ -89,12 +94,15 @@ export const StyledTextarea = styled.textarea`
 `;
 
 export const StyledPostList = styled.div`
-  padding: 0 30px;
+  padding: 0 5px;
 `;
 export const StyledPost = styled.div`
   border-bottom: 1px solid #777;
   margin-bottom: 20px;
   padding-bottom: 10px;
+  p {
+    font-size: 1.1rem;
+  }
 `;
 export const StyledPostHeader = styled.header`
   display: flex;
@@ -109,7 +117,7 @@ export const StyledPostHeader = styled.header`
   }
 
   p {
-    font-size: 0.9em;
+    font-size: 1rem;
     margin-right: 10px;
   }
 `;
@@ -125,6 +133,7 @@ export const StyledSpan = styled.span`
   display: ${(display) => display};
   margin-left: 10px;
   cursor: pointer;
+  font-size: 1.1rem;
 `;
 
 export const LikeSection = styled.section`
@@ -137,6 +146,10 @@ export const LikeSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  span {
+    font-size: 1.1rem;
   }
   span:first-child {
     display: flex;

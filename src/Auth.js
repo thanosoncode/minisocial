@@ -77,7 +77,7 @@ function Auth() {
     <AuthContainer>
       {!isMember && (
         <Form onSubmit={register} autoComplete="off">
-          <h3>Create your account</h3>
+          <h3>Create account</h3>
           <p>{errorRegister}</p>
           <input
             autoComplete="off"
