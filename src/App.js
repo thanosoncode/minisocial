@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Crud from "./Crud";
+import Auth from "./Auth";
+import styled from "styled-components";
+import { useGlobalContext } from "./Context";
+import { ThemeProvider } from "styled-components";
 
-function App() {
+const theme = {
+  color: "#ee7752",
+};
+
+const App = () => {
+  const { user, isLoggedIn } = useGlobalContext();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <>{isLoggedIn ? <Crud /> : <Auth />}</>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
