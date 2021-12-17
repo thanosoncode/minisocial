@@ -124,13 +124,9 @@ const Crud = () => {
   };
 
   useEffect(() => {
-    let isMounted = true;
-
     getPosts();
     console.log("fired");
-    return () => {
-      return (isMounted = false);
-    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, showAllPosts]);
   return (
     <Container>
