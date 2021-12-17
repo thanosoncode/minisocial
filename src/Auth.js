@@ -23,7 +23,7 @@ function Auth() {
   const register = async (e) => {
     e.preventDefault();
     try {
-      const user = await createUserWithEmailAndPassword(
+      await createUserWithEmailAndPassword(
         auth,
         registerEmail,
         registerPassword
@@ -39,11 +39,7 @@ function Auth() {
   const login = async (e) => {
     e.preventDefault();
     try {
-      const user = await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      );
+      await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       setIsLoggedIn(true);
     } catch (error) {
       console.log(error.message);
