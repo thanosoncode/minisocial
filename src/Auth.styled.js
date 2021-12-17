@@ -5,6 +5,11 @@ export const AuthContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  @media (max-width: 500px) {
+    align-items: flex-start;
+    padding-top: 200px;
+  }
 `;
 
 export const Form = styled.form`
@@ -13,13 +18,13 @@ export const Form = styled.form`
   border-radius: 10px;
   border: 1px solid #777;
   padding: 10px;
-  min-width: 320px;
+  min-width: 360px;
   background: white;
 
   h3 {
     color: ${({ theme }) => theme.color};
     margin: 20px 0 10px 0;
-    font-size: 2rem;
+    font-size: 2.3rem;
     text-align: center;
   }
 
@@ -63,12 +68,19 @@ export const Form = styled.form`
     text-align: center;
   }
   span {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-right: 10px;
   }
 
   span:last-child {
     color: ${({ theme }) => theme.color};
     cursor: pointer;
+  }
+
+  @media (max-width: 500px) {
+    button {
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
   }
 `;

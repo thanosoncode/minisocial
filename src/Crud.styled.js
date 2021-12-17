@@ -85,7 +85,7 @@ export const StyledTextarea = styled.textarea`
   resize: vertical;
   font-family: "Roboto", sans-serif;
   padding: 5px;
-  font-size: 1em;
+  font-size: 1.1rem;
 
   &:focus {
     border: none;
@@ -97,7 +97,7 @@ export const StyledPostList = styled.div`
   padding: 0 5px;
 `;
 export const StyledPost = styled.div`
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid ${({ theme }) => theme.color};
   margin-bottom: 20px;
   padding-bottom: 10px;
   p {
@@ -117,8 +117,11 @@ export const StyledPostHeader = styled.header`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-right: 10px;
+  }
+  p:last-child {
+    font-weight: 500;
   }
 `;
 
@@ -127,13 +130,14 @@ export const EditTextarea = styled.textarea`
   resize: vertical;
   font-family: "Roboto", sans-serif;
   padding: 5px;
+  font-size: 1.1rem;
 `;
 
 export const StyledSpan = styled.span`
   display: ${(display) => display};
   margin-left: 10px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 `;
 
 export const LikeSection = styled.section`
